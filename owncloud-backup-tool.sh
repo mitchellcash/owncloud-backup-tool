@@ -15,4 +15,4 @@ mysqldump --lock-tables -h "$host" -u "$user" --password="$password" "$db_name" 
 rsync -Aax /var/www/owncloud/config /var/www/owncloud/data ~/owncloud-backup
 
 # Backup the database dump, config/ and data/ directories to Amazon S3
-aws s3 sync ~/owncloud-backup s3://"$s3_bucket_name"
+aws s3 sync ~/owncloud-backup s3://"$s3_bucket_name" --delete
