@@ -5,7 +5,12 @@
 # Load config file TODO: make this more secure
 source .owncloud-backup-tool/owncloud-backup-tool.conf
 
-# Make directory to store local backups
+# Check if awscli exists and abort if not
+if ! pip list --format=columns | grep -F awscli > /dev/null; then
+  echo >&2 "I require awscli, but it's not installed.  Aborting."; exit 1;
+fi
+
+# Make directories as needed to store local backups, no error if existing
 mkdir -p ~/owncloud-backup/database
 
 # MySQL/MariaDB database dump
