@@ -5,15 +5,26 @@
 # Load config file TODO: make this more secure
 source .owncloud-backup-tool/owncloud-backup-tool.conf
 
+# Check if pip exists and abort if not
+hash pip &> /dev/null
+if [ $? -eq 1 ]
+then
+    echo >&2 "Error: Could not find pip"
+    exit 1
+fi
+
 # Check if awscli exists and abort if not
-if ! pip list --format=columns | grep -F awscli > /dev/null; then
-  echo >&2 "I require awscli, but it's not installed.  Aborting."; exit 1;
+hash aws &> /dev/null
+if [ $? -eq 1 ]
+then
+    echo >&2 "Error: Could not find awscli pip package"
+    exit 1
 fi
 
 # Make directories as needed to store local backups, no error if existing
 mkdir -p ~/owncloud-backup/database
 
-# MySQL/MariaDB database dump
+# MySQL database dump
 mysqldump --lock-tables -h "$host" -u "$user" --password="$password" "$db_name" > ~/owncloud-backup/database/owncloud-dbbackup_"$(date +"%Y%m%d")".bak
 
 # Locally backup the config/ and data/ directories
