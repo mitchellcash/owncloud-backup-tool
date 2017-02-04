@@ -24,3 +24,8 @@ Usage
 ```
 $ wget -O - https://raw.githubusercontent.com/mitchellcash/ownUp/master/ownUp/ownup.sh | sh
 ```
+
+License
+-------
+
+ownUp is released under the terms of the MIT license. See [LICENSE](https://github.com/mitchellcash/ownUp/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
