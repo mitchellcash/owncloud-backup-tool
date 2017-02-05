@@ -24,10 +24,10 @@ if [ ! -f $HOME/.ownup/ownup.conf ]; then
   read -p 'MySQL database name: ' mysql_db_name_var
 
   echo "s3_bucket_name="'"'$s3_bucket_name_var'"' > $HOME/.ownup/ownup.conf
-  echo "host="'"'$mysql_host_var'"' >> $HOME/.ownup/ownup.conf
-  echo "user="'"'$mysql_user_var'"' >> $HOME/.ownup/ownup.conf
-  echo "password="'"'$mysql_password_var'"' >> $HOME/.ownup/ownup.conf
-  echo "db_name="'"'$mysql_db_name_var'"' >> $HOME/.ownup/ownup.conf
+  echo "mysql_host="'"'$mysql_host_var'"' >> $HOME/.ownup/ownup.conf
+  echo "mysql_user="'"'$mysql_user_var'"' >> $HOME/.ownup/ownup.conf
+  echo "mysql_password="'"'$mysql_password_var'"' >> $HOME/.ownup/ownup.conf
+  echo "mysql_db_name="'"'$mysql_db_name_var'"' >> $HOME/.ownup/ownup.conf
 fi
 
 # Load config file TODO: make this more secure?
