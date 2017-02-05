@@ -1,15 +1,17 @@
 #!/bin/bash
 #
-# A script to backup your ownCloud database as well as config/ and data/ directories to Amazon s3
+# A script to backup your ownCloud database as well as config/ and data/
+# directories to Amazon s3.
 
-# Check system setup: Are we running Ubuntu
+# Check system setup: Are we running as root on Ubuntu
 # If not, this shows an error and exits.
 source preflight.sh
 
-# Load config file TODO: make this more secure
-source ../conf/ownup.conf
+# Load config file TODO: make this more secure?
+source conf/ownup.conf
 
 # Check if pip exists and abort if not
+# TODO: install pip for user if not exist
 hash pip &> /dev/null
 if [ $? -eq 1 ]
 then
@@ -18,6 +20,7 @@ then
 fi
 
 # Check if awscli exists and abort if not
+# TODO: install awscli for user if not exist
 hash aws &> /dev/null
 if [ $? -eq 1 ]
 then

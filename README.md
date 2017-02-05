@@ -24,7 +24,7 @@ Usage
 -----
 
 ```
-$ wget -O - https://raw.githubusercontent.com/mitchellcash/ownUp/master/ownUp/ownup.sh | sh
+$ curl -fsSL https://raw.githubusercontent.com/mitchellcash/ownup/master/setup.sh | sudo sh
 ```
 
 License
