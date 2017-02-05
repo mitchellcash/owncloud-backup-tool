@@ -2,6 +2,10 @@
 #
 # A script to backup your ownCloud database as well as config/ and data/ directories to Amazon s3
 
+# Check system setup: Are we running Ubuntu
+# If not, this shows an error and exits.
+source preflight.sh
+
 # Load config file TODO: make this more secure
 source ../conf/ownup.conf
 
