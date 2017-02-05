@@ -30,4 +30,4 @@ $ curl -fsSL https://raw.githubusercontent.com/mitchellcash/ownup/master/setup.s
 License
 -------
 
-ownUp is released under the terms of the MIT license. See [LICENSE](https://github.com/mitchellcash/ownUp/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.
+ownUp is released under the terms of the MIT license. See [LICENSE](https://github.com/mitchellcash/ownup/blob/master/LICENSE) for more information or see https://opensource.org/licenses/MIT.

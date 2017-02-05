@@ -19,7 +19,7 @@ fi
 # Clone the ownUp repository if it doesn't exist
 if [ ! -d $HOME/ownup ]; then
   echo "Downloading ownUp . . ."
-  git clone https://github.com/mitchellcash/ownUp.git $HOME/ownup 2> /dev/null
+  git clone https://github.com/mitchellcash/ownup.git $HOME/ownup 2> /dev/null
   echo "ownUp successfully downloaded!"
   echo
 fi
