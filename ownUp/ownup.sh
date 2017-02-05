@@ -3,9 +3,16 @@
 # A script to backup your ownCloud database as well as config/ and data/
 # directories to Amazon s3.
 
+# Variables
+# TODO: allow user to select their own path to a config file
+config_path="$HOME/.ownup/ownup.conf"
+
+# Load functions
+source $HOME/ownup/ownUp/functions.sh
+
 # Check system setup: Are we running as root on Ubuntu
 # If not, this shows an error and exits.
-source ownUp/preflight.sh
+source $HOME/ownup/ownUp/preflight.sh
 
 # Check if a config file exists, if not create one from user input
 if [ ! -f $HOME/.ownup/ownup.conf ]; then
@@ -24,25 +31,15 @@ if [ ! -f $HOME/.ownup/ownup.conf ]; then
 fi
 
 # Load config file TODO: make this more secure?
-source $HOME/.ownup/ownup.conf
+source $config_path
 
 # Check if pip exists and abort if not
 # TODO: install pip for user if not exist
-hash pip &> /dev/null
-if [ $? -eq 1 ]
-then
-    echo >&2 "Error: Could not find pip"
-    exit 1
-fi
+$(install_check pip)
 
 # Check if awscli exists and abort if not
 # TODO: install awscli for user if not exist
-hash aws &> /dev/null
-if [ $? -eq 1 ]
-then
-    echo >&2 "Error: Could not find awscli pip package"
-    exit 1
-fi
+$(install_check aws)
 
 # Make directories as needed to store local backups, no error if existing
 mkdir -p ~/owncloud-backup/database

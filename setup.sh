@@ -24,8 +24,5 @@ if [ ! -d $HOME/ownup ]; then
   echo
 fi
 
-# Change directory to ownUp repository
-cd $HOME/ownup
-
 # Start setup script
-source ownUp/ownup.sh
+source $HOME/ownup/ownUp/ownup.sh
