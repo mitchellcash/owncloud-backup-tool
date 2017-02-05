@@ -1,0 +1,65 @@
+body {
+  background: rgba(0,0,0,0.8);
+    color: #eee;
+    font-family: "Source Sans Pro","Open Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1.125em;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizelegibility;
+}
+
+a {
+  color: #0070c9;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 500;
+  letter-spacing: .004em;
+  line-height: 1.10746;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: .011em;
+  line-height: 1.5625;
+  margin-top: 10px;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.45455;
+  letter-spacing: .016em;
+  text-align: center;
+}
+
+code {
+  background: rgba(0,0,0,0.3);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.45455;
+  letter-spacing: .016em;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+#header_image {
+  text-align: center;
+}
+
+#disclaimer {
+  bottom: 0;
+  font-size: 8px;
+  left: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
