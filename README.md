@@ -20,6 +20,8 @@ $ curl -s -o- https://bootstrap.pypa.io/get-pip.py | python get-pip.py
 $ pip install awscli
 ```
 
+Before using aws-cli, you need to tell it about your AWS credentials. You can do this by running the `aws configure` command.
+
 Usage
 -----
 
