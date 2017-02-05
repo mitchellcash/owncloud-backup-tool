@@ -5,7 +5,7 @@
 
 # Check system setup: Are we running as root on Ubuntu
 # If not, this shows an error and exits.
-source preflight.sh
+source ownUp/preflight.sh
 
 # Load config file TODO: make this more secure?
 source conf/ownup.conf

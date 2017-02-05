@@ -24,7 +24,7 @@ Usage
 -----
 
 ```
-$ curl -fsSL https://raw.githubusercontent.com/mitchellcash/ownup/master/setup.sh | sudo sh
+$ curl -fsSL https://raw.githubusercontent.com/mitchellcash/ownup/master/setup.sh | sudo bash
 ```
 
 License
