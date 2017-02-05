@@ -1,0 +1,11 @@
+markdown: kramdown
+highlighter: rouge
+
+repository: https://github.com/mitchellcash/ownup
+
+exclude:
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
